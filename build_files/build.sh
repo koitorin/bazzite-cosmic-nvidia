@@ -10,7 +10,10 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 dnf5 copr enable -y ryanabx/cosmic-epoch
-dnf5 install -y @cosmic-desktop @cosmic-desktop-apps
+dnf5 install -y cosmic-desktop /
+                cosmic-edit /
+                cosmic-player && /
+                cosmic-store
 dnf5 copr disable -y ryanabx/cosmic-epoch
 
 # Use a COPR Example:
