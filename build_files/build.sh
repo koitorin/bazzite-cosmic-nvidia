@@ -11,7 +11,7 @@ set -ouex pipefail
 
 # Install Cosmic DE and related apps
 dnf5 -y copr enable ryanabx/cosmic-epoch
-dnf5 -y install \ 
+dnf5 -y install \
         cosmic-desktop \
         cosmic-edit \
         cosmic-player \
