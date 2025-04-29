@@ -9,12 +9,14 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-dnf5 copr enable -y ryanabx/cosmic-epoch
-dnf5 install -y cosmic-desktop /
-                cosmic-edit /
-                cosmic-player && /
-                cosmic-store
-dnf5 copr disable -y ryanabx/cosmic-epoch
+# Install Cosmic DE and related apps
+dnf5 copr -y enable ryanabx/cosmic-epoch
+dnf5 -y install \ 
+        cosmic-desktop \
+        cosmic-edit \
+        cosmic-player \
+        cosmic-store
+dnf5 copr -y disable ryanabx/cosmic-epoch
 
 # Use a COPR Example:
 #
