@@ -24,12 +24,11 @@ dnf5 -y install cosmic-ext-applet-clipboard-manager \
                 cosmic-ext-applet-external-monitor-brightness
 dnf5 -y copr disable wiiznokes/cosmic-applets-unofficial
 
-# Use a COPR Example:
-#
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
-# Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
+# Add fcitx5 as workaround for Japanese, Chinese, and Korean input while Cosmic solution is broken upstream
+dnf5 -y install fcitx5-mozc \
+	        fcitx5-chinese-addons \
+		fcitx5-hangul \
+		kcm-fcitx5
 
 #### Example for enabling a System Unit File
 
