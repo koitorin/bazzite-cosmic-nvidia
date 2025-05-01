@@ -16,6 +16,13 @@ dnf5 -y install \
         cosmic-edit \
         cosmic-player \
         cosmic-store
+dnf5 -y copr disable ryanabx/cosmic-epoch
+
+# Install additional cosmic applets
+dnf5 -y copr enable wiiznokes/cosmic-applets-unofficial
+dnf5 -y install cosmic-ext-applet-clipboard-manager \
+                cosmic-ext-applet-external-monitor-brightness
+dnf5 -y copr disable wiiznokes/cosmic-applets-unofficial
 
 # Use a COPR Example:
 #
