@@ -1,6 +1,6 @@
 # bazzite-cosmic-nvidia
 
-This is `bazzite-gnome-nvidia` image with Cosmic DE from the [COPR](https://copr.fedorainfracloud.org/coprs/ryanabx/cosmic-epoch/), COSMIC apps, and nothing more added.
+This is `bazzite-gnome-nvidia` image with Cosmic DE from the [COPR](https://copr.fedorainfracloud.org/coprs/ryanabx/cosmic-epoch/), COSMIC apps, and some small tweaks.
 
 ## Rebase from bazzite-gnome* or any Silverblue based image
 
