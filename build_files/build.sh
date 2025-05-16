@@ -9,12 +9,14 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# Install Cosmic DE and remove apps that have flatpaks
-dnf5 -y install @cosmic-desktop-environment
-dnf5 -y remove firefox \
-	       thunderbird \
-	       rhythmbox \
-	       nheko
+# Install Cosmic DE and related apps
+dnf5 -y copr enable ryanabx/cosmic-epoch
+dnf5 -y install \
+        cosmic-desktop \
+        cosmic-edit \
+        cosmic-player \
+        cosmic-store
+dnf5 -y copr disable ryanabx/cosmic-epoch
 
 # Install additional cosmic applets
 dnf5 -y copr enable wiiznokes/cosmic-applets-unofficial
