@@ -25,7 +25,8 @@ dnf5 -y install cosmic-ext-applet-clipboard-manager \
 dnf5 -y copr disable wiiznokes/cosmic-applets-unofficial
 
 # Add fcitx5 as workaround for Japanese, Chinese, and Korean input while Cosmic solution is broken upstream
-dnf5 -y install fcitx5-mozc \
+dnf5 -y install fcitx5-configtool \
+		fcitx5-mozc \
 	        fcitx5-chinese-addons \
 		fcitx5-hangul \
 		kcm-fcitx5
